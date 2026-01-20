@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1768372194" />
+    <testcase name="test_xnor_xor" classname="xnor_xor_test" file="c:\Users\thana\OneDrive\Desktop\HW-SYS-Lab\lab1\part2\part2-1\tests\xnor_xor_test.py" lineno="8" time="0.013996362686157227" sim_time_ns="8.0" ratio_time="571.5770717996763" />
+  </testsuite>
+</testsuites>
