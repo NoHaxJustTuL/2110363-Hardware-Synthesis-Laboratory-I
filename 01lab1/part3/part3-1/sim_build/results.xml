@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1768373604" />
+    <testcase name="fulladder_2bit_test" classname="fulladder_2bit_test" file="c:\Users\thana\OneDrive\Desktop\HW-SYS-Lab\lab1\part3\part3-1\tests\fulladder_2bit_test.py" lineno="11" time="0.014737606048583984" sim_time_ns="32.0" ratio_time="2171.31601255379" />
+  </testsuite>
+</testsuites>

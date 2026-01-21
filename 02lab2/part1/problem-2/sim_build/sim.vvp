@@ -1,0 +1,84 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_00000212f9892ca0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_00000212f9892e30 .scope module, "bcd_counter" "bcd_counter" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /OUTPUT 4 "q";
+    .port_info 3 /OUTPUT 1 "cout";
+L_00000212f990e048 .functor BUFT 1, C4<1001>, C4<0>, C4<0>, C4<0>;
+v00000212f9893320_0 .net/2u *"_ivl_0", 3 0, L_00000212f990e048;  1 drivers
+o00000212f98c6fe8 .functor BUFZ 1, C4<z>; HiZ drive
+v00000212f98b6bf0_0 .net "clk", 0 0, o00000212f98c6fe8;  0 drivers
+v00000212f990dc30_0 .net "cout", 0 0, L_00000212f98c3ab0;  1 drivers
+v00000212f990dcd0_0 .var "q", 3 0;
+o00000212f98c7078 .functor BUFZ 1, C4<z>; HiZ drive
+v00000212f990dd70_0 .net "rst", 0 0, o00000212f98c7078;  0 drivers
+E_00000212f998cd80 .event posedge, v00000212f990dd70_0, v00000212f98b6bf0_0;
+L_00000212f98c3ab0 .cmp/eq 4, v00000212f990dcd0_0, L_00000212f990e048;
+S_00000212f9892fc0 .scope module, "cocotb_iverilog_dump" "cocotb_iverilog_dump" 4 1;
+ .timescale -9 -12;
+S_00000212f990de10 .scope begin, "$unm_blk_5" "$unm_blk_5" 4 2, 4 2 0, S_00000212f9892fc0;
+ .timescale -9 -12;
+v00000212f990dfa0_0 .var/str "dumpfile_path";
+    .scope S_00000212f9892e30;
+T_0 ;
+    %wait E_00000212f998cd80;
+    %load/vec4 v00000212f990dd70_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v00000212f990dcd0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v00000212f990dcd0_0;
+    %cmpi/e 9, 0, 4;
+    %jmp/0xz  T_0.2, 4;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v00000212f990dcd0_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v00000212f990dcd0_0;
+    %addi 1, 0, 4;
+    %assign/vec4 v00000212f990dcd0_0, 0;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_00000212f9892fc0;
+T_1 ;
+    %fork t_1, S_00000212f990de10;
+    %jmp t_0;
+    .scope S_00000212f990de10;
+t_1 ;
+    %vpi_func 4 3 "$value$plusargs" 32, "dumpfile_path=%s", v00000212f990dfa0_0 {0 0 0};
+    %cmpi/ne 0, 0, 32;
+    %jmp/0xz  T_1.0, 4;
+    %vpi_call/w 4 4 "$dumpfile", v00000212f990dfa0_0 {0 0 0};
+    %jmp T_1.1;
+T_1.0 ;
+    %vpi_call/w 4 6 "$dumpfile", "C:\134Users\134thana\134HW-SYS-Lab\134lab2\134part1\134problem-2\134sim_build\134bcd_counter.fst" {0 0 0};
+T_1.1 ;
+    %vpi_call/w 4 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000212f9892e30 {0 0 0};
+    %end;
+    .scope S_00000212f9892fc0;
+t_0 %join;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "C:\Users\thana\HW-SYS-Lab\lab2\part1\problem-2\bcd_counter.v";
+    "C:\Users\thana\HW-SYS-Lab\lab2\part1\problem-2\sim_build\cocotb_iverilog_dump.v";

@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1768373459" />
+    <testcase name="jkff_test_1" classname="jkff_test" file="c:\Users\thana\OneDrive\Desktop\HW-SYS-Lab\lab1\part2\part2-4\tests\jkff_test.py" lineno="10" time="0.014984846115112305" sim_time_ns="100.0" ratio_time="6673.408537652544" />
+    <testcase name="jkff_test_2" classname="jkff_test" file="c:\Users\thana\OneDrive\Desktop\HW-SYS-Lab\lab1\part2\part2-4\tests\jkff_test.py" lineno="34" time="0.00457310676574707" sim_time_ns="100.0" ratio_time="21866.972524894427" />
+  </testsuite>
+</testsuites>

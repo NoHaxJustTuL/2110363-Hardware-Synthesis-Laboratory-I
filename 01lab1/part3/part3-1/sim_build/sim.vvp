@@ -1,0 +1,77 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_0000029c00496500 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0000029c00496690 .scope module, "fulladder_2bit" "fulladder_2bit" 3 3;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "A";
+    .port_info 1 /INPUT 2 "B";
+    .port_info 2 /INPUT 1 "Cin";
+    .port_info 3 /OUTPUT 2 "Sum";
+    .port_info 4 /OUTPUT 1 "Cout";
+o0000029c004e6f98 .functor BUFZ 2, C4<zz>; HiZ drive
+v0000029c00496c50_0 .net "A", 1 0, o0000029c004e6f98;  0 drivers
+o0000029c004e6fc8 .functor BUFZ 2, C4<zz>; HiZ drive
+v0000029c00496820_0 .net "B", 1 0, o0000029c004e6fc8;  0 drivers
+o0000029c004e6ff8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000029c004968c0_0 .net "Cin", 0 0, o0000029c004e6ff8;  0 drivers
+v0000029c004e5ec0_0 .net "Cout", 0 0, L_0000029c004e46b0;  1 drivers
+v0000029c004e5f60_0 .net "Sum", 1 0, L_0000029c004e4250;  1 drivers
+L_0000029c0052e610 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000029c004e6000_0 .net *"_ivl_10", 0 0, L_0000029c0052e610;  1 drivers
+v0000029c004e60a0_0 .net *"_ivl_11", 2 0, L_0000029c004e3b70;  1 drivers
+v0000029c004d51e0_0 .net *"_ivl_13", 2 0, L_0000029c004e3a30;  1 drivers
+L_0000029c0052e658 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0000029c004d5280_0 .net *"_ivl_16", 1 0, L_0000029c0052e658;  1 drivers
+v0000029c004d5320_0 .net *"_ivl_17", 2 0, L_0000029c004e4430;  1 drivers
+v0000029c004d53c0_0 .net *"_ivl_3", 2 0, L_0000029c004e3c10;  1 drivers
+L_0000029c0052e5c8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000029c004d5460_0 .net *"_ivl_6", 0 0, L_0000029c0052e5c8;  1 drivers
+v0000029c004e4570_0 .net *"_ivl_7", 2 0, L_0000029c004e42f0;  1 drivers
+L_0000029c004e46b0 .part L_0000029c004e4430, 2, 1;
+L_0000029c004e4250 .part L_0000029c004e4430, 0, 2;
+L_0000029c004e3c10 .concat [ 2 1 0 0], o0000029c004e6f98, L_0000029c0052e5c8;
+L_0000029c004e42f0 .concat [ 2 1 0 0], o0000029c004e6fc8, L_0000029c0052e610;
+L_0000029c004e3b70 .arith/sum 3, L_0000029c004e3c10, L_0000029c004e42f0;
+L_0000029c004e3a30 .concat [ 1 2 0 0], o0000029c004e6ff8, L_0000029c0052e658;
+L_0000029c004e4430 .arith/sum 3, L_0000029c004e3b70, L_0000029c004e3a30;
+S_0000029c004e5d30 .scope module, "cocotb_iverilog_dump" "cocotb_iverilog_dump" 4 1;
+ .timescale -9 -12;
+S_0000029c0052e430 .scope begin, "$unm_blk_1" "$unm_blk_1" 4 2, 4 2 0, S_0000029c004e5d30;
+ .timescale -9 -12;
+v0000029c004e3990_0 .var/str "dumpfile_path";
+    .scope S_0000029c004e5d30;
+T_0 ;
+    %fork t_1, S_0000029c0052e430;
+    %jmp t_0;
+    .scope S_0000029c0052e430;
+t_1 ;
+    %vpi_func 4 3 "$value$plusargs" 32, "dumpfile_path=%s", v0000029c004e3990_0 {0 0 0};
+    %cmpi/ne 0, 0, 32;
+    %jmp/0xz  T_0.0, 4;
+    %vpi_call/w 4 4 "$dumpfile", v0000029c004e3990_0 {0 0 0};
+    %jmp T_0.1;
+T_0.0 ;
+    %vpi_call/w 4 6 "$dumpfile", "C:\134Users\134thana\134OneDrive\134Desktop\134HW-SYS-Lab\134lab1\134part3\134part3-1\134sim_build\134fulladder_2bit.fst" {0 0 0};
+T_0.1 ;
+    %vpi_call/w 4 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000029c00496690 {0 0 0};
+    %end;
+    .scope S_0000029c004e5d30;
+t_0 %join;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "C:\Users\thana\OneDrive\Desktop\HW-SYS-Lab\lab1\part3\part3-1\fulladder_2bit.v";
+    "C:\Users\thana\OneDrive\Desktop\HW-SYS-Lab\lab1\part3\part3-1\sim_build\cocotb_iverilog_dump.v";

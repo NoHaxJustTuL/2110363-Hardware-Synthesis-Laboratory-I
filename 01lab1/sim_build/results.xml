@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1768325586" />
+    <testcase name="counter_test" classname="counter_test" file="c:\Users\thana\OneDrive\Desktop\HW-SYS-Lab\lab1\part3\part3-2\tests\counter_test.py" lineno="11" time="0.006468057632446289" sim_time_ns="95.0" ratio_time="14687.562387113421" />
+  </testsuite>
+</testsuites>
