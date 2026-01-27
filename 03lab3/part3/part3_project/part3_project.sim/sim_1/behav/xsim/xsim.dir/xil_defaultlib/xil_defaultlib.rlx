@@ -1,0 +1,9 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/03lab3/part3/part3_project/part3_project.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,,,,,,,
+C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/03lab3/part3/problem-1/full_adder_4_bits.v,1769437404,verilog,,C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/03lab3/part3/problem-2/fsm.v,,full_adder_4_bits,,,../../../../../../../../../../../Xilinx/2025.2/Vivado/data/rsb/busdef,,,,,
+C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/03lab3/part3/problem-1/full_adder_4_bits_tb.v,1769485260,verilog,,C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/03lab3/part3/problem-2/fsm_tb.v,,full_adder_4_bits_tb,,,../../../../../../../../../../../Xilinx/2025.2/Vivado/data/rsb/busdef,,,,,
+C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/03lab3/part3/problem-2/fsm.v,1769486628,verilog,,C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/03lab3/part3/problem-1/full_adder_4_bits_tb.v,,fsm,,,../../../../../../../../../../../Xilinx/2025.2/Vivado/data/rsb/busdef,,,,,
+C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/03lab3/part3/problem-2/fsm_tb.v,1769490178,verilog,,,,fsm_tb,,,../../../../../../../../../../../Xilinx/2025.2/Vivado/data/rsb/busdef,,,,,

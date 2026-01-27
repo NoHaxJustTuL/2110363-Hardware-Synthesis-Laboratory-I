@@ -1,0 +1,21 @@
+Time resolution is 1 ps
+Time =                    0 | reset = 1 | data_in = 0 | data_out = xx
+Time =                 5000 | reset = 1 | data_in = 0 | data_out = 01
+--- Simulation Start ---
+Time =                10000 | reset = 0 | data_in = 1 | data_out = 01
+Time =                15000 | reset = 0 | data_in = 1 | data_out = 11
+Time =                25000 | reset = 0 | data_in = 1 | data_out = 00
+Time =                35000 | reset = 0 | data_in = 1 | data_out = 11
+Time =                40000 | reset = 0 | data_in = 0 | data_out = 11
+Time =                45000 | reset = 0 | data_in = 0 | data_out = 10
+Time =                50000 | reset = 0 | data_in = 1 | data_out = 10
+Time =                55000 | reset = 0 | data_in = 1 | data_out = 11
+Time =                65000 | reset = 0 | data_in = 1 | data_out = 00
+State Reset to C manually...
+Time =                70000 | reset = 0 | data_in = 0 | data_out = 00
+Time =                75000 | reset = 0 | data_in = 0 | data_out = 10
+Time =                85000 | reset = 0 | data_in = 0 | data_out = 01
+Time =                95000 | reset = 0 | data_in = 0 | data_out = 10
+Time =               105000 | reset = 0 | data_in = 0 | data_out = 01
+--- Test Passed ---
+$finish called at time : 106 ns : File "C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/03lab3/part3/problem-2/fsm_tb.v" Line 54
