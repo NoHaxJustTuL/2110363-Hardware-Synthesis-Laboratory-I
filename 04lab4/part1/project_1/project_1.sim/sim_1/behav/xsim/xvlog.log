@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/04lab4/part1/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/04lab4/part1/rom_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_tb

@@ -1,0 +1,20 @@
+Time resolution is 1 ps
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. rom_tb.uut.xpm_memory_sprom_inst.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /rom_tb/uut/xpm_memory_sprom_inst/xpm_memory_base_inst/Initial310_0  Scope: rom_tb.uut.xpm_memory_sprom_inst.xpm_memory_base_inst.config_drc  File: C:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 522
+Input:  0, Output:   0
+Input:  1, Output:   1
+Input:  2, Output:   4
+Input:  3, Output:   9
+Input:  4, Output:  16
+Input:  5, Output:  25
+Input:  6, Output:  36
+Input:  7, Output:  49
+Input:  8, Output:  64
+Input:  9, Output:  81
+Input: 10, Output: 100
+Input: 11, Output: 121
+Input: 12, Output: 144
+Input: 13, Output: 169
+Input: 14, Output: 196
+Input: 15, Output: 225
+$finish called at time : 170 ns : File "C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/04lab4/part1/rom_tb.v" Line 29
