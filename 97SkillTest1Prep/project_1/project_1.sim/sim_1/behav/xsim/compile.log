@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/97SkillTest1Prep/Src/skilltest1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module skilltest1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/97SkillTest1Prep/Sim/skilltest1TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module skilltest1TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/97SkillTest1Prep/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

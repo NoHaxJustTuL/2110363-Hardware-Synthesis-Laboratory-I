@@ -1,0 +1,8 @@
+Time resolution is 1 ps
+Running test cases
+Finished test cases
+Test Results:
+PPPPPPPP
+Total Score: 100/100
+$finish called at time : 308795441 ns : File "C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/97SkillTest1Prep/Sim/skilltest1TB.v" Line 385
+INFO: xsimkernel Simulation Memory Usage: 19548 KB (Peak: 19548 KB), Simulation CPU Usage: 10983 ms
