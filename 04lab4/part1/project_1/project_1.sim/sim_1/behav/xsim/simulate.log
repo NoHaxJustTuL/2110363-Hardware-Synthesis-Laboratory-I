@@ -17,4 +17,4 @@ Input: 12, Output: 144
 Input: 13, Output: 169
 Input: 14, Output: 196
 Input: 15, Output: 225
-$finish called at time : 170 ns : File "C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/04lab4/part1/rom_tb.v" Line 29
+$finish called at time : 170 ns : File "C:/Users/thana/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/04lab4/part1/rom_tb.v" Line 28

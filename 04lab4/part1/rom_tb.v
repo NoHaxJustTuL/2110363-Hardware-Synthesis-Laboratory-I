@@ -18,9 +18,8 @@ module rom_tb ();
         forever #5 clk = ~clk;  // 10ns clock period
     end
 
-    integer i;
     initial begin
-        for (i = 0; i < 16; i = i + 1) begin
+        for (integer i = 0; i < 16; i = i + 1) begin
             in = i;
             #10;  // Wait for one clock cycle
             $display("Input: %d, Output: %d", in, out);

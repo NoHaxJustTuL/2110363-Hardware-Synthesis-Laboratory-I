@@ -30,7 +30,7 @@ module fifo_controller(
     output full,
     output empty,
     output reg [3:0] mSize
-    );
+);
 
     reg [2:0] back;
     reg [2:0] front;
