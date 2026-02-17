@@ -1,0 +1,98 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Tue Feb 17 13:38:13 2026
+| Host         : Tul-NB running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file UARTLedSystem_control_sets_placed.rpt
+| Design       : UARTLedSystem
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   115 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |    10 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              58 |           21 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             123 |           44 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  Clock Signal  |                                         Enable Signal                                         | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  Clk_IBUF_BUFG | InputSanitizerInst/PreviousData                                                               | Reset_IBUF       |                1 |              1 |         1.00 |
+|  Clk_IBUF_BUFG | UARTRxInst/data_reg[7]                                                                        | Reset_IBUF       |                1 |              1 |         1.00 |
+|  Clk_IBUF_BUFG | UARTRxInst/data_reg[4]                                                                        | Reset_IBUF       |                1 |              1 |         1.00 |
+|  Clk_IBUF_BUFG | UARTRxInst/data_reg[0]                                                                        | Reset_IBUF       |                1 |              1 |         1.00 |
+|  Clk_IBUF_BUFG | UARTRxInst/data_reg[5]                                                                        | Reset_IBUF       |                1 |              1 |         1.00 |
+|  Clk_IBUF_BUFG | UARTRxInst/data_reg[3]                                                                        | Reset_IBUF       |                1 |              1 |         1.00 |
+|  Clk_IBUF_BUFG | UARTRxInst/data_reg[6]                                                                        | Reset_IBUF       |                1 |              1 |         1.00 |
+|  Clk_IBUF_BUFG | UARTRxInst/data_reg[2]                                                                        | Reset_IBUF       |                1 |              1 |         1.00 |
+|  Clk_IBUF_BUFG | UARTRxInst/data_reg[1]                                                                        | Reset_IBUF       |                1 |              1 |         1.00 |
+|  Clk_IBUF_BUFG | UARTTxInst/tx_reg                                                                             | Reset_IBUF       |                1 |              1 |         1.00 |
+|  Clk_IBUF_BUFG | UARTTxInst/FSM_onehot_state[4]_i_1_n_0                                                        | Reset_IBUF       |                1 |              5 |         5.00 |
+|  Clk_IBUF_BUFG | UARTRxInst/valid_data_out[0]                                                                  | Reset_IBUF       |                2 |              8 |         4.00 |
+|  Clk_IBUF_BUFG | UARTTxInst/data_reg[0]                                                                        | Reset_IBUF       |                2 |              8 |         4.00 |
+|  Clk_IBUF_BUFG | UARTRxInst/bit_timer_0[0]                                                                     | Reset_IBUF       |                4 |             10 |         2.50 |
+|  Clk_IBUF_BUFG | UARTTxInst/bit_timer[0]                                                                       | Reset_IBUF       |                5 |             10 |         2.00 |
+|  Clk_IBUF_BUFG | TxDataBufferInst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] | Reset_IBUF       |                4 |             18 |         4.50 |
+|  Clk_IBUF_BUFG | TxDataBufferInst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] | Reset_IBUF       |                5 |             18 |         3.60 |
+|  Clk_IBUF_BUFG | RxDataBufferInst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] | Reset_IBUF       |                5 |             18 |         3.60 |
+|  Clk_IBUF_BUFG | RxDataBufferInst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] | Reset_IBUF       |                6 |             18 |         3.00 |
+|  Clk_IBUF_BUFG |                                                                                               | Reset_IBUF       |               21 |             58 |         2.76 |
++----------------+-----------------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+
+
