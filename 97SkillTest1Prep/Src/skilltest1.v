@@ -44,7 +44,7 @@ module skilltest1 (
         end
     end
 
-    // Arimetic operation
+    // Aritmetic operation
     reg overflow;
     reg [15:0] value;
 
@@ -54,7 +54,7 @@ module skilltest1 (
             value <= 1;
         end else if (trigger_action && !overflow) begin
             // To update value there must be a pulse and does not overflow
-            // Do not upate value if it will overflow because assign BCD is asynchronous
+            // Do not update value if it will overflow because assign BCD is asynchronous
             if (prev_trigger[0]) begin
                 if (value + 1 > 9999) begin
                     overflow <= 1;

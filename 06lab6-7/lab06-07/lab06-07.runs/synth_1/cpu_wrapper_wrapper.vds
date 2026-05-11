@@ -1,0 +1,239 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Mar 17 15:46:17 2026
+# Process ID         : 7220
+# Current directory  : C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.runs/synth_1
+# Command line       : vivado.exe -log cpu_wrapper_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu_wrapper_wrapper.tcl
+# Log file           : C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.runs/synth_1/cpu_wrapper_wrapper.vds
+# Journal file       : C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.runs/synth_1\vivado.jou
+# Running On         : Tul-NB
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 5800U with Radeon Graphics         
+# CPU Frequency      : 1896 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16480 MB
+# Swap memory        : 18253 MB
+# Total Virtual      : 34734 MB
+# Available Virtual  : 18755 MB
+#-----------------------------------------------------------
+source cpu_wrapper_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 560.852 ; gain = 255.648
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.2/Vivado/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.srcs/utils_1/imports/synth_1/single_cycle_cpu.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.srcs/utils_1/imports/synth_1/single_cycle_cpu.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top cpu_wrapper_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23752
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1303.801 ; gain = 541.938
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu_wrapper_wrapper' [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.gen/sources_1/bd/cpu_wrapper/hdl/cpu_wrapper_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'cpu_wrapper' [c:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.gen/sources_1/bd/cpu_wrapper/synth/cpu_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'cpu_wrapper_clk_wiz_0_0' [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.runs/synth_1/.Xil/Vivado-7220-Tul-NB/realtime/cpu_wrapper_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_wrapper_clk_wiz_0_0' (0#1) [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.runs/synth_1/.Xil/Vivado-7220-Tul-NB/realtime/cpu_wrapper_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'cpu_wrapper_single_cycle_cpu_lab7_0_0' [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.runs/synth_1/.Xil/Vivado-7220-Tul-NB/realtime/cpu_wrapper_single_cycle_cpu_lab7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_wrapper_single_cycle_cpu_lab7_0_0' (0#1) [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.runs/synth_1/.Xil/Vivado-7220-Tul-NB/realtime/cpu_wrapper_single_cycle_cpu_lab7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_wrapper' (0#1) [c:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.gen/sources_1/bd/cpu_wrapper/synth/cpu_wrapper.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_wrapper_wrapper' (0#1) [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.gen/sources_1/bd/cpu_wrapper/hdl/cpu_wrapper_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1421.305 ; gain = 659.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1421.305 ; gain = 659.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1421.305 ; gain = 659.441
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1421.305 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.gen/sources_1/bd/cpu_wrapper/ip/cpu_wrapper_single_cycle_cpu_lab7_0_0/cpu_wrapper_single_cycle_cpu_lab7_0_0/cpu_wrapper_single_cycle_cpu_lab7_0_0_in_context.xdc] for cell 'cpu_wrapper_i/single_cycle_cpu_lab7_0'
+Finished Parsing XDC File [c:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.gen/sources_1/bd/cpu_wrapper/ip/cpu_wrapper_single_cycle_cpu_lab7_0_0/cpu_wrapper_single_cycle_cpu_lab7_0_0/cpu_wrapper_single_cycle_cpu_lab7_0_0_in_context.xdc] for cell 'cpu_wrapper_i/single_cycle_cpu_lab7_0'
+Parsing XDC File [c:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.gen/sources_1/bd/cpu_wrapper/ip/cpu_wrapper_clk_wiz_0_0/cpu_wrapper_clk_wiz_0_0/cpu_wrapper_clk_wiz_0_0_in_context.xdc] for cell 'cpu_wrapper_i/clk_wiz_0'
+Finished Parsing XDC File [c:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.gen/sources_1/bd/cpu_wrapper/ip/cpu_wrapper_clk_wiz_0_0/cpu_wrapper_clk_wiz_0_0/cpu_wrapper_clk_wiz_0_0_in_context.xdc] for cell 'cpu_wrapper_i/clk_wiz_0'
+Parsing XDC File [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.srcs/constrs_1/new/Constraints.xdc]
+Finished Parsing XDC File [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.srcs/constrs_1/new/Constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.srcs/constrs_1/new/Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu_wrapper_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cpu_wrapper_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1421.305 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1421.305 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.305 ; gain = 659.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.305 ; gain = 659.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.305 ; gain = 659.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1421.305 ; gain = 659.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1422.469 ; gain = 660.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1597.672 ; gain = 835.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1597.672 ; gain = 835.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1607.230 ; gain = 845.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1857.191 ; gain = 1095.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1857.191 ; gain = 1095.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1857.191 ; gain = 1095.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1857.191 ; gain = 1095.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1857.191 ; gain = 1095.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1857.191 ; gain = 1095.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------------+----------+
+|      |BlackBox name                         |Instances |
++------+--------------------------------------+----------+
+|1     |cpu_wrapper_clk_wiz_0_0               |         1|
+|2     |cpu_wrapper_single_cycle_cpu_lab7_0_0 |         1|
++------+--------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------+------+
+|      |Cell                                |Count |
++------+------------------------------------+------+
+|1     |cpu_wrapper_clk_wiz_0               |     1|
+|2     |cpu_wrapper_single_cycle_cpu_lab7_0 |     1|
+|3     |IBUF                                |    10|
+|4     |OBUF                                |     8|
++------+------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1857.191 ; gain = 1095.328
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:53 . Memory (MB): peak = 1857.191 ; gain = 1095.328
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1857.191 ; gain = 1095.328
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1866.406 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1870.062 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 89d1e550
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 1870.062 ; gain = 1294.520
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1870.062 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/thana/Second-Year/HW-SYS-Lab/2110363-Hardware-Synthesis-Laboratory-I/06lab6-7/lab06-07/lab06-07.runs/synth_1/cpu_wrapper_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file cpu_wrapper_wrapper_utilization_synth.rpt -pb cpu_wrapper_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 15:47:52 2026...

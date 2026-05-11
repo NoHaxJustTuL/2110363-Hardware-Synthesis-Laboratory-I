@@ -1,0 +1,246 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Tue Mar 17 15:49:54 2026
+| Host         : Tul-NB running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file cpu_wrapper_wrapper_control_sets_placed.rpt
+| Design       : cpu_wrapper_wrapper
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   168 |
+|    Minimum number of control sets                        |   168 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    13 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   168 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |   129 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    36 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              40 |           17 |
+| Yes          | No                    | No                     |               8 |            7 |
+| Yes          | No                    | Yes                    |            1024 |          580 |
+| Yes          | Yes                   | No                     |            1051 |          633 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+|              Clock Signal              |                                          Enable Signal                                          |                        Set/Reset Signal                        | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/uart_rx_inst/bit_count[0]                  | rst_0_IBUF                                                     |                1 |              4 |         4.00 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/uart_rx_inst/pulse_counter[6]_i_1_n_0      | rst_0_IBUF                                                     |                3 |              7 |         2.33 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/uart_rx_inst/E[0]                          | rst_0_IBUF                                                     |                2 |              7 |         3.50 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 |                                                                                                 | rst_0_IBUF                                                     |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_28[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[73][7]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[65][7]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_2[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_9[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[66][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[83][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[7][7]_i_5_0[0]                        | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_10[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_2[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_11[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_6[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[85][7]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_3[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[86][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_8[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_7[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[108][7]_i_5[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_1[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_9[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[87][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_13[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_8[0]                         | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_4[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[88][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[84][7]_i_7_12[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[97][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[99][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[9][7]_i_5_0[0]                        | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[93][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[89][7]_i_3_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[92][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[94][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[89][7]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/rst_0[0]                                   |                                                                |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[98][7]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[0][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[119][7]_i_5[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[116][7]_i_5[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[11][7]_i_4[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[112][7]_i_5[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[125][7]_i_6[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[14][7]_i_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[76][7]_i_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[63][7]_i_4_11[0]                    | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[1][7]_i_4[0]                        | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[28][7]_i_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[64][7]_i_4[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[72][7]_i_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[12][7]_i_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[56][7]_i_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[42][7]_i_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[26][7]_i_6[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[33][7]_i_4[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[4][7]_i_4[0]                        | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[60][7]_i_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[8][7]_i_4[0]                        | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/memory[96][7]_i_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[114][7]_i_3_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[101][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[114][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[100][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[104][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[117][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[115][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[102][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[105][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[110][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[126][7]_i_3_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[123][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[118][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                8 |              8 |         1.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[126][7]_i_3[0]                        | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[122][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[124][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[121][7]_i_5_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[125][0]_i_2[0]                        | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[126][7]_i_3_1[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[15][7]_i_4_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[127][7]_i_6_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[17][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[127][7]_i_4_0[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[18][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[20][7]_i_4_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[21][7]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[30][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[62][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[23][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[37][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[25][7]_i_4_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[22][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[35][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[46][7]_i_4_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[48][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[51][7]_i_3_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[41][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[24][7]_i_4_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[3][7]_i_5_0[0]                        | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[3][7]_i_5_1[0]                        | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                7 |              8 |         1.14 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[53][7]_i_4_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[44][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[52][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[40][7]_i_4_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[36][7]_i_5_6[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[39][7]_i_4_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[35][7]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[61][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_10[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_11[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_13[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_15[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                3 |              8 |         2.67 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_16[0]                      | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[38][7]_i_4_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_7[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[67][7]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[71][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_3[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[79][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[81][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[6][7]_i_5_0[0]                        | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[69][7]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_4[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[70][7]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                6 |              8 |         1.33 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[68][7]_i_7[0]                         | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                4 |              8 |         2.00 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/memory[63][7]_i_4_6[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |                5 |              8 |         1.60 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/uart_rx_inst/shift_reg_0[0]                | rst_0_IBUF                                                     |                2 |              9 |         4.50 |
+| ~cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/pc_inst/E[0]                                         | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               11 |             16 |         1.45 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_6_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               16 |             32 |         2.00 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_4_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               26 |             32 |         1.23 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_7_1[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               17 |             32 |         1.88 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_4_2[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               15 |             32 |         2.13 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_5_1[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               17 |             32 |         1.88 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_6_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               18 |             32 |         1.78 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_4_7[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               10 |             32 |         3.20 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_6_3[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               12 |             32 |         2.67 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_8_1[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               17 |             32 |         1.88 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_4_6[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               21 |             32 |         1.52 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_8_2[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               13 |             32 |         2.46 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_8_4[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               25 |             32 |         1.28 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_7_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               17 |             32 |         1.88 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_8_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               17 |             32 |         1.88 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_8_5[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               19 |             32 |         1.68 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_6_1[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               22 |             32 |         1.45 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_4_4[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               23 |             32 |         1.39 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_7_2[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               18 |             32 |         1.78 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_7_6[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               20 |             32 |         1.60 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_4_1[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               22 |             32 |         1.45 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_8_7[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               16 |             32 |         2.00 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_8_6[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               16 |             32 |         2.00 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_5_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               21 |             32 |         1.52 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_6_2[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               16 |             32 |         2.00 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_7_0[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               26 |             32 |         1.23 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_6_4[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               17 |             32 |         1.88 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_8_3[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               15 |             32 |         2.13 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_7_3[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               12 |             32 |         2.67 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_4_3[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               18 |             32 |         1.78 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 |                                                                                                 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               14 |             32 |         2.29 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/E[0]                                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               19 |             32 |         1.68 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_5_2[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               21 |             32 |         1.52 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/regs[0][31]_i_7_4[0]                       | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/sys_reset |               18 |             32 |         1.78 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/uart_rx_inst/FSM_sequential_state_reg[0]   |                                                                |               12 |             48 |         4.00 |
+|  cpu_wrapper_i/clk_wiz_0/inst/clk_out1 | cpu_wrapper_i/single_cycle_cpu_lab7_0/inst/imem_inst/uart_rx_inst/FSM_sequential_state_reg[0]_0 |                                                                |               12 |             48 |         4.00 |
++----------------------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+
+

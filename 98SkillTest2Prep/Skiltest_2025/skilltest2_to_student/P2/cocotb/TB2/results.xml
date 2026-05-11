@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1775641497" />
+    <testcase name="tb_2" classname="TB" file="C:\Users\thana\Second-Year\HW-SYS-Lab\2110363-Hardware-Synthesis-Laboratory-I\98SkillTest2Prep\Skiltest_2025\skilltest2_to_student\P2\cocotb\TB2\TB.py" lineno="45" time="5.246973752975464" sim_time_ns="774570.001" ratio_time="147622.23663893028" />
+  </testsuite>
+</testsuites>

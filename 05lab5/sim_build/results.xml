@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1775030510" />
+    <testcase name="test_uart_rx_alphabet_stress" classname="uart_rx_tb" file="C:\Users\thana\Second-Year\HW-SYS-Lab\2110363-Hardware-Synthesis-Laboratory-I\05lab5\tests\uart_rx_tb.py" lineno="12" time="50.17518758773804" sim_time_ns="3120690.0" ratio_time="62195.88107255315" />
+  </testsuite>
+</testsuites>
